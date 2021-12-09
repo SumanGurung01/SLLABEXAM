@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+
+    <div align="center">
+
+        <h1>ROAD TRAFFIC VALIDATION MANAGEMENT</h1>
+
+            <form>
+               
+                <input type="text" (ngModel)="name" (input)="changename($event)" placeholder="Violator Name" required>
+                <br><br>
+                <input type="text" (ngModel)="aadhar"(input)="changenumber($event)" placeholder="Aadhar Number" required>
+                <br><br>
+                <input type="text" (ngModel)="offence" (input)="changeoff($event)" placeholder="Offence" required> 
+                <br><br>
+                <input type="text" (ngModel)="amount" (input)="changeamount($event)" placeholder="Amount" required>
+                <br><br>
+                <button type="submit" class="btn" (click)="post()">Save</button>
+                <br><br>
+            
+            </form>
+
+            <button type="button" class="btn" (click)="get()">See Record</button>
+
+    </div>
+
+    <br><br>
+
+    <div *ngIf="data.length > 0" align="center">
+        <table>
+            <tr>
+                <th>Violator Name</th>
+                <th>Aadhar Number</th>
+                <th>Offence</th>
+                <th>Penalty</th>
+            </tr>
+            <tr *ngFor="let item of data" >
+                <td>{{item.name}}</td>
+                <td>{{item.aadhar}}</td>
+                <td>{{item.offence}}</td>
+                <td>{{item.amount}}</td>
+            </tr>
+        </table>
+        <br><br>
+        <button (click)="getavg()">Penalty Average</button>
+        <br><br>
+        <div *ngIf="variable">
+            {{variable}}
+        </div>
+    </div>
+
+</body>
+</html>
+
+<router-outlet></router-outlet>

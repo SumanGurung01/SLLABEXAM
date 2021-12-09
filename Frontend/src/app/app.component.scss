@@ -1,0 +1,42 @@
+input[type="text"]
+{
+  height: 25px;
+  border-radius: 19px;
+  padding-left: 14px;
+  background-color: #F2DDF0;
+}
+
+.btn
+{
+  width: 15%;
+  height: 39px;
+  border-radius: 27px;
+  background-color: #a1a1a1;
+  color: black;
+}
+
+table
+{
+  z-index: 2;
+  transition: transplate(-50%,-50%);
+  border-radius: 9px;
+  overflow: hidden;
+  box-shadow: 0 0 2px rgba(10,10,10,0.1);
+  background: #fafafa;
+  text-align: center;
+  left: 10%;
+  right: 10%;
+}
+
+th,td
+{
+  padding-left: 19px;
+  padding-right: 19px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  border: .1px solid;
+  border-radius: 5px;
+
+}
+
+
